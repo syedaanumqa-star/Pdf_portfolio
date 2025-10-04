@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anam - Senior QA Engineer & Automation Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: white;
+        }
+        
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .header .subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 25px;
+        }
+        
+        .header .tagline {
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            background: #f8f9fa;
+            padding: 30px 40px;
+            border-bottom: 3px solid #667eea;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+        }
+        
+        /* Content Section */
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 45px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #667eea;
+            font-weight: 600;
+        }
+        
+        /* Expertise Grid */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .expertise-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s;
+        }
+        
+        .expertise-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .expertise-card h3 {
+            color: #667eea;
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .expertise-card ul {
+            list-style: none;
+        }
+        
+        .expertise-card li {
+            padding: 6px 0;
+            font-size: 14px;
+            color: #495057;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .expertise-card li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        /* Skills Tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            display: inline-block;
+        }
+        
+        /* Project Cards */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .project-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover {
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+        
+        .project-card h4 {
+            color: #2c3e50;
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .project-url {
+            color: #667eea;
+            font-size: 12px;
+            margin-bottom: 12px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .project-card ul {
+            list-style: none;
+            margin-bottom: 12px;
+        }
+        
+        .project-card li {
+            font-size: 13px;
+            color: #495057;
+            padding: 4px 0;
+            padding-left: 18px;
+            position: relative;
+        }
+        
+        .project-card li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .project-result {
+            background: #e7f3ff;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #0066cc;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        
+        /* Highlights */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .highlight-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 18px;
+            border-radius: 8px;
+            font-size: 14px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .highlight-item:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        /* Why Hire Section */
+        .why-hire-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .why-hire-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .why-hire-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .why-hire-card p {
+            font-size: 14px;
+            opacity: 0.95;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .cta-section h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 25px;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        /* RESPONSIVE DESIGN - TABLET */
+        @media screen and (max-width: 1024px) {
+            .header h1 {
+                font-size: 36px;
+            }
+            
+            .header .subtitle {
+                font-size: 18px;
+            }
+            
+            .content {
+                padding: 30px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .stat-number {
+                font-size: 30px;
+            }
+        }
+        
+        /* RESPONSIVE DESIGN - MOBILE */
+        @media screen and (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 28px;
+            }
+            
+            .header .subtitle {
+                font-size: 16px;
+            }
+            
+            .header .tagline {
+                font-size: 14px;
+            }
+            
+            .stats-bar {
+                padding: 20px;
+                gap: 15px;
+            }
+            
+            .stat-item {
+                min-width: 100px;
+            }
+            
+            .stat-number {
+                font-size: 24px;
+            }
+            
+            .stat-label {
+                font-size: 11px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section {
+                margin-bottom: 30px;
+            }
+            
+            .section-title {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+            
+            /* Single column layout for mobile */
+            .expertise-grid,
+            .project-grid,
+            .highlights-grid,
+            .why-hire-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .expertise-card,
+            .project-card {
+                padding: 15px;
+            }
+            
+            .expertise-card h3 {
+                font-size: 16px;
+            }
+            
+            .expertise-card li,
+            .project-card li {
+                font-size: 13px;
+            }
+            
+            .project-card h4 {
+                font-size: 15px;
+            }
+            
+            .why-hire-card {
+                padding: 20px;
+            }
+            
+            .why-hire-card h3 {
+                font-size: 18px;
+            }
+            
+            .why-hire-card p {
+                font-size: 13px;
+            }
+            
+            .skill-tag {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+            
+            .cta-section {
+                padding: 30px 20px;
+            }
+            
+            .cta-section h2 {
+                font-size: 24px;
+            }
+            
+            .cta-section p {
+                font-size: 16px;
+            }
+            
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 14px;
+            }
+        }
+        
+        /* RESPONSIVE DESIGN - SMALL MOBILE */
+        @media screen and (max-width: 480px) {
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .header .subtitle {
+                font-size: 14px;
+            }
+            
+            .header .tagline {
+                font-size: 13px;
+            }
+            
+            .stats-bar {
+                justify-content: center;
+            }
+            
+            .stat-item {
+                min-width: 45%;
+            }
+            
+            .content {
+                padding: 15px;
+            }
+            
+            .section-title {
+                font-size: 18px;
+            }
+            
+            .expertise-card,
+            .project-card {
+                padding: 12px;
+            }
+            
+            .highlight-item {
+                padding: 12px;
+                font-size: 13px;
+            }
+            
+            .cta-section h2 {
+                font-size: 20px;
+            }
+            
+            .cta-section p {
+                font-size: 14px;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            
+            .header, .stats-bar, .why-hire-card, .cta-section, .skill-tag {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .project-card, .expertise-card, .highlight-item, .why-hire-card {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            .section-title {
+                page-break-after: avoid;
+            }
+            
+            h1, h2, h3, h4 {
+                page-break-after: avoid;
+            }
+            
+            .header {
+                page-break-after: avoid;
+            }
+            
+            .stats-bar {
+                page-break-after: avoid;
+            }
+            
+            .expertise-card:hover,
+            .project-card:hover,
+            .cta-button:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+        
+        @page {
+            margin: 15mm;
+            size: A4 portrait;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>ANAM</h1>
+            <div class="subtitle">Senior QA Engineer & Automation Specialist</div>
+            <div class="tagline">
+                Delivering flawless, scalable software solutions through expert QA testing, intelligent automation, and seamless CRM integrations. 6+ years of proven excellence in ensuring your product ships bug-free and ready to scale.
+            </div>
+        </div>
+        
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number">6+</span>
+                <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">5000+</span>
+                <span class="stat-label">Test Cases Executed</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100K+</span>
+                <span class="stat-label">Leads Managed</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">70%</span>
+                <span class="stat-label">Time Saved via Automation</span>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <!-- Core Expertise -->
+            <div class="section">
+                <h2 class="section-title">Core Expertise</h2>
+                <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <h3>🎯 Manual Testing (Advanced)</h3>
+                        <ul>
+                            <li>Comprehensive test planning & strategy</li>
+                            <li>Functional, UI/UX, & security testing</li>
+                            <li>Cross-browser & mobile compatibility</li>
+                            <li>API & database validation</li>
+                            <li>Bug tracking (JIRA, TestRail, ClickUp)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="expertise-card">
+                        <h3>⚡ Automation Testing (Expert)</h3>
+                        <ul>
+                            <li>Framework design (Selenium, Cypress, Playwright)</li>
+                            <li>CI/CD integration & test reporting</li>
+                            <li>Data-driven & BDD testing</li>
+                            <li>Python scripting for custom solutions</li>
+                            <li>70% reduction in regression time</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="expertise-card">
+                        <h3>🔄 CRM & Automation Platforms</h3>
+                        <ul>
+                            <li><strong>GoHighLevel:</strong> Funnel architect, campaign builder & QA</li>
+                            <li><strong>Zoho CRM:</strong> Lead management, workflow automation & data migration</li>
+                            <li><strong>Make.com:</strong> Healthcare workflows, Email RAG systems</li>
+                            <li><strong>Zapier:</strong> Multi-app integrations, lead capture automation</li>
+                            <li><strong>n8n:</strong> AI agents, self-hosted solutions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="expertise-card">
+                        <h3>🛠️ Technical Skills</h3>
+                        <ul>
+                            <li><strong>Languages:</strong> Python, JavaScript (Expert)</li>
+                            <li><strong>Tools:</strong> Postman, Git, Jenkins, GitHub Actions</li>
+                            <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
+                            <li><strong>Methodologies:</strong> Agile, Scrum, SDLC, STLC</li>
+                            <li><strong>Specialties:</strong> API testing, performance testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Featured Manual Testing Projects -->
+            <div class="section">
+                <h2 class="section-title">Featured Manual Testing Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h4>Leak-Stop Canada</h4>
+                        <a href="https://leak-stop.ca" class="project-url">leak-stop.ca</a>
+                        <ul>
+                            <li>Comprehensive booking system testing</li>
+                            <li>Payment gateway integration</li>
+                            <li>Cross-browser & mobile testing</li>
+                            <li>Documented 40+ critical bugs</li>
+                        </ul>
+                        <div class="project-result">📊 Result: 95% reduction in post-launch complaints</div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4>The Cocktail Bot UK</h4>
+                        <a href="https://thecocktailbot.co.uk" class="project-url">thecocktailbot.co.uk</a>
+                        <ul>
+                            <li>E-commerce & product customization</li>
+                            <li>Drink selection algorithms</li>
+                            <li>Stripe payment integration</li>
+                            <li>Performance testing for high traffic</li>
+                        </ul>
+                        <div class="project-result">🎯 Result: Zero critical bugs at launch</div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4>OLCM HR Pakistan</h4>
+                        <a href="https://olcmhr.edu.pk" class="project-url">olcmhr.edu.pk</a>
+                        <ul>
+                            <li>Student registration & enrollment</li>
+                            <li>Database validation for records</li>
+                            <li>Security & accessibility testing</li>
+                            <li>WCAG compliance verification</li>
+                        </ul>
+                        <div class="project-result">🏆 Result: Secure platform for 5,000+ students</div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4>Luneclair E-commerce</h4>
+                        <a href="https://luneclair.com" class="project-url">luneclair.com</a>
+                        <ul>
+                            <li>Complete cart & checkout testing</li>
+                            <li>Product filtering & search</li>
+                            <li>Inventory management validation</li>
+                            <li>Email marketing integration</li>
+                        </ul>
+                        <div class="project-result">💎 Result: 99.9% uptime in Q1</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Automation & CRM Projects -->
+            <div class="section">
+                <h2 class="section-title">Automation & CRM Integration Projects</h2>
+                
+                <div class="project-card" style="margin-bottom: 20px;">
+                    <h4>🏥 Healthcare Practice Management (GoHighLevel)</h4>
+                    <ul>
+                        <li>Built 12-touchpoint patient acquisition funnel</li>
+                        <li>Automated SMS + Email appointment reminders</li>
+                        <li>Webhook integration with practice management software</li>
+                        <li>Missed call text-back automation</li>
+                    </ul>
+                    <div class="project-result">📈 Result: 35% reduction in no-shows, 50% increase in lead conversion</div>
+                </div>
+                
+                <div class="project-card" style="margin-bottom: 20px;">
+                    <h4>🏢 Real Estate CRM Pipeline (Zoho CRM + Zapier)</h4>
+                    <ul>
+                        <li>Lead data migration from legacy systems to Zoho CRM</li>
+                        <li>Automated lead scoring & assignment workflows</li>
+                        <li>Custom fields for property preferences & buyer journey stages</li>
+                        <li>Zapier integration for instant lead notifications</li>
+                        <li>Built 15+ email nurture sequences with conditional logic</li>
+                    </ul>
+                    <div class="project-result">🚀 Result: Managed 10,000+ leads/month with 92% delivery rate</div>
+                </div>
+                
+                <div class="project-card" style="margin-bottom: 20px;">
+                    <h4>🛒 E-commerce Abandoned Cart Recovery (Shopify + Make.com)</h4>
+                    <ul>
+                        <li>Multi-channel recovery (Email, SMS, Voicemail)</li>
+                        <li>Dynamic product recommendations</li>
+                        <li>A/B tested messaging optimization</li>
+                        <li>Shopify API integration</li>
+                    </ul>
+                    <div class="project-result">💰 Result: Recovered 28% of abandoned carts, $150K+ revenue</div>
+                </div>
+                
+                <div class="project-card" style="margin-bottom: 20px;">
+                    <h4>🤖 AI-Powered Customer Support (n8n)</h4>
+                    <ul>
+                        <li>Built custom AI chat agent for product recommendations</li>
+                        <li>Integrated with inventory & pricing database</li>
+                        <li>Natural language query handling</li>
+                        <li>Auto ticket categorization & routing</li>
+                    </ul>
+                    <div class="project-result">⚡ Result: 60% queries handled autonomously, 40% reduced support workload</div>
+                </div>
+            </div>
+            
+            <!-- Professional Highlights -->
+            <div class="section">
+                <h2 class="section-title">Professional Highlights</h2>
+                <div class="highlights-grid">
+                    <div class="highlight-item">Led testing for 20+ web & mobile apps</div>
+                    <div class="highlight-item">Executed 5,000+ comprehensive test cases</div>
+                    <div class="highlight-item">Built 50+ GoHighLevel funnels (100K+ leads/month)</div>
+                    <div class="highlight-item">Created 30+ Make.com workflows (200+ hours saved)</div>
+                    <div class="highlight-item">Integrated 100+ Zapier automations (50+ apps)</div>
+                    <div class="highlight-item">Reduced post-release bugs by 40%</div>
+                    <div class="highlight-item">Expertise in Zoho CRM data migration & workflows</div>
+                    <div class="highlight-item">Collaborated with 15+ cross-functional Agile teams</div>
+                </div>
+            </div>
+            
+            <!-- Why Hire Me -->
+            <div class="section">
+                <h2 class="section-title">Why Clients Choose Me</h2>
+                <div class="why-hire-grid">
+                    <div class="why-hire-card">
+                        <h3>🎯 Full-Stack QA</h3>
+                        <p>Expert in both technical testing AND marketing automation, catching edge cases others miss</p>
+                    </div>
+                    <div class="why-hire-card">
+                        <h3>⚡ Automation Obsessed</h3>
+                        <p>If it's manual and repetitive, I'll automate it – saving you 60-80% of time and cost</p>
+                    </div>
+                    <div class="why-hire-card">
+                        <h3>🔍 Detail-Oriented</h3>
+                        <p>I think like an attacker, a user, and a developer – covering all angles comprehensively</p>
+                    </div>
+                    <div class="why-hire-card">
+                        <h3>💬 Clear Communicator</h3>
+                        <p>No technical jargon – I explain bugs and solutions in plain English for easy understanding</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skills Summary -->
+            <div class="section">
+                <h2 class="section-title">Technical Skills Portfolio</h2>
+                <div class="skills-container">
+                    <span class="skill-tag">Manual Testing</span>
+                    <span class="skill-tag">Automation Testing</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Selenium</span>
+                    <span class="skill-tag">Cypress</span>
+                    <span class="skill-tag">Playwright</span>
+                    <span class="skill-tag">API Testing</span>
+                    <span class="skill-tag">GoHighLevel</span>
+                    <span class="skill-tag">Zoho CRM</span>
+                    <span class="skill-tag">Make.com</span>
+                    <span class="skill-tag">Zapier</span>
+                    <span class="skill-tag">n8n</span>
+                    <span class="skill-tag">AI Agents</span>
+                    <span class="skill-tag">JIRA</span>
+                    <span class="skill-tag">TestRail</span>
+                    <span class="skill-tag">Postman</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">CI/CD</span>
+                    <span class="skill-tag">Agile/Scrum</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">Cross-Browser Testing</span>
+                    <span class="skill-tag">Mobile Testing</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Ready to Deliver Flawless Products?</h2>
+            <p>Let's discuss how I can help you ship faster, save money, and scale with confidence.</p>
+            <a href="mailto:syedaanum.qa@gmail.com" class="cta-button">
+            Start Your Project Today
+            </a>
+
+
+        </div>
+    </div>
+</body>
+</html>
