@@ -180,13 +180,61 @@
             background: white;
             border: 1px solid #e9ecef;
             border-radius: 8px;
-            padding: 20px;
+            overflow: hidden;
             transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
         
         .project-card:hover {
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
             border-color: #667eea;
+            transform: translateY(-5px);
+        }
+        
+        .project-thumbnail {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .project-thumbnail::after {
+            content: '→ View Live';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(102, 126, 234, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .project-card:hover .project-thumbnail::after {
+            opacity: 1;
+        }
+        
+        .project-content {
+            padding: 20px;
         }
         
         .project-card h4 {
@@ -223,6 +271,12 @@
             left: 0;
             color: #667eea;
             font-weight: bold;
+        }
+        
+        .project-icon {
+            font-size: 48px;
+            color: white;
+            opacity: 0.9;
         }
         
         .project-result {
@@ -397,6 +451,10 @@
             .why-hire-grid {
                 grid-template-columns: 1fr;
                 gap: 15px;
+            }
+            
+            .project-thumbnail {
+                height: 150px;
             }
             
             .expertise-card,
@@ -647,53 +705,107 @@
             <div class="section">
                 <h2 class="section-title">Featured Manual Testing Projects</h2>
                 <div class="project-grid">
-                    <div class="project-card">
-                        <h4>Leak-Stop Canada</h4>
-                        <a href="https://leak-stop.ca" class="project-url">leak-stop.ca</a>
-                        <ul>
-                            <li>Comprehensive booking system testing</li>
-                            <li>Payment gateway integration</li>
-                            <li>Cross-browser & mobile testing</li>
-                            <li>Documented 40+ critical bugs</li>
-                        </ul>
-                        <div class="project-result">📊 Result: 95% reduction in post-launch complaints</div>
-                    </div>
+                    <a href="https://leak-stop.ca" target="_blank" class="project-card">
+                        <div class="project-thumbnail">
+                            <img src="images/leak-stop.PNG" alt="Leak-Stop Canada">
+                        </div>
+                        <div class="project-content">
+                            <h4>Leak-Stop Canada</h4>
+                            <span class="project-url">leak-stop.ca</span>
+                            <ul>
+                                <li>Comprehensive booking system testing</li>
+                                <li>Payment gateway integration</li>
+                                <li>Cross-browser & mobile testing</li>
+                                <li>Documented 40+ critical bugs</li>
+                            </ul>
+                            <div class="project-result">📊 Result: 95% reduction in post-launch complaints</div>
+                        </div>
+                    </a>
                     
-                    <div class="project-card">
-                        <h4>The Cocktail Bot UK</h4>
-                        <a href="https://thecocktailbot.co.uk" class="project-url">thecocktailbot.co.uk</a>
-                        <ul>
-                            <li>E-commerce & product customization</li>
-                            <li>Drink selection algorithms</li>
-                            <li>Stripe payment integration</li>
-                            <li>Performance testing for high traffic</li>
-                        </ul>
-                        <div class="project-result">🎯 Result: Zero critical bugs at launch</div>
-                    </div>
+                    <a href="https://thecocktailbot.co.uk" target="_blank" class="project-card">
+                        <div class="project-thumbnail">
+                            <img src="images/cocktailbot.PNG" alt="The Cocktail Bot UK">
+                        </div>
+                        <div class="project-content">
+                            <h4>The Cocktail Bot UK</h4>
+                            <span class="project-url">thecocktailbot.co.uk</span>
+                            <ul>
+                                <li>E-commerce & product customization</li>
+                                <li>Drink selection algorithms</li>
+                                <li>Stripe payment integration</li>
+                                <li>Performance testing for high traffic</li>
+                            </ul>
+                            <div class="project-result">🎯 Result: Zero critical bugs at launch</div>
+                        </div>
+                    </a>
                     
-                    <div class="project-card">
-                        <h4>OLCM HR Pakistan</h4>
-                        <a href="https://olcmhr.edu.pk" class="project-url">olcmhr.edu.pk</a>
-                        <ul>
-                            <li>Student registration & enrollment</li>
-                            <li>Database validation for records</li>
-                            <li>Security & accessibility testing</li>
-                            <li>WCAG compliance verification</li>
-                        </ul>
-                        <div class="project-result">🏆 Result: Secure platform for 5,000+ students</div>
-                    </div>
+                    <a href="https://olcmhr.edu.pk" target="_blank" class="project-card">
+                        <div class="project-thumbnail">
+                            <img src="images/olmhr.PNG" alt="OLCM HR Pakistan">
+                        </div>
+                        <div class="project-content">
+                            <h4>OLCM HR Pakistan</h4>
+                            <span class="project-url">olcmhr.edu.pk</span>
+                            <ul>
+                                <li>Student registration & enrollment</li>
+                                <li>Database validation for records</li>
+                                <li>Security & accessibility testing</li>
+                                <li>WCAG compliance verification</li>
+                            </ul>
+                            <div class="project-result">🏆 Result: Secure platform for 5,000+ students</div>
+                        </div>
+                    </a>
                     
-                    <div class="project-card">
-                        <h4>Luneclair E-commerce</h4>
-                        <a href="https://luneclair.com" class="project-url">luneclair.com</a>
-                        <ul>
-                            <li>Complete cart & checkout testing</li>
-                            <li>Product filtering & search</li>
-                            <li>Inventory management validation</li>
-                            <li>Email marketing integration</li>
-                        </ul>
-                        <div class="project-result">💎 Result: 99.9% uptime in Q1</div>
-                    </div>
+                    <a href="https://sesisendleleni.org.za" target="_blank" class="project-card">
+                        <div class="project-thumbnail">
+                            <img src="images/ses.PNG" alt="Sesi Sendleleni">
+                        </div>
+                        <div class="project-content">
+                            <h4>Sesi Sendleleni</h4>
+                            <span class="project-url">sesisendleleni.org.za</span>
+                            <ul>
+                                <li>Multilingual testing (English, Zulu, Xhosa)</li>
+                                <li>Donation system & payment processing</li>
+                                <li>Content management system testing</li>
+                                <li>Mobile-first responsive validation</li>
+                            </ul>
+                            <div class="project-result">🌍 Result: Accessible platform serving diverse community</div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://play.google.com/store/apps/details?id=com.systodevs.quotesapp" target="_blank" class="project-card">
+                        <div class="project-thumbnail">
+                            <img src="images/systodev.PNG" alt="Quotes Mobile App">
+                        </div>
+                        <div class="project-content">
+                            <h4>Quotes Mobile App</h4>
+                            <span class="project-url">Android App - Google Play Store</span>
+                            <ul>
+                                <li>Mobile app functionality testing</li>
+                                <li>User interface validation</li>
+                                <li>Performance optimization</li>
+                                <li>Cross-device compatibility</li>
+                            </ul>
+                            <div class="project-result">⭐ Result: Published on Google Play Store</div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://gradi-blinds.learnframer.site/" target="_blank" class="project-card">
+                        <div class="project-thumbnail">
+                            <img src="images/content.PNG" alt="Gradient Blinds Design">
+                        </div>
+                        <div class="project-content">
+                            <h4>Gradient Blinds Design</h4>
+                            <span class="project-url">gradi-blinds.learnframer.site</span>
+                            <ul>
+                                <li>Interactive UI testing</li>
+                                <li>Animation & transitions validation</li>
+                                <li>Responsive design testing</li>
+                                <li>User experience optimization</li>
+                            </ul>
+                            <div class="project-result">✨ Result: Smooth interactive experience</div>
+                        </div>
+                    </a>
                 </div>
             </div>
             
@@ -821,11 +933,8 @@
         <div class="cta-section">
             <h2>Ready to Deliver Flawless Products?</h2>
             <p>Let's discuss how I can help you ship faster, save money, and scale with confidence.</p>
-            <a href="mailto:syedaanum.qa@gmail.com" class="cta-button">
-            Start Your Project Today
-            </a>
-
-
+             <a href="mailto:syedaanum.qa@gmail.com" class="cta-button">Start Your Project Today</a>
+            
         </div>
     </div>
 </body>
